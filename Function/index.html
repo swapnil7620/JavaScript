@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+    <script>
+        // function is block of code or code we wrapped in block
+        // default funtion
+        // parameter we can pass in below Myfun at creating
+        function Myfun(){
+            document.writeln("hello Function "+"<br>");
+            document.writeln("hello Function "+"<br>");       
+        }
+        // Argument we can pass in below Myfun at calling
+        /*
+        Myfun();
+        Myfun();
+        Myfun();
+      document.write("<hr>");
+*/
+        // Paremetrize function
+/*
+        function Add(a,b){
+            document.writeln(" Addition is : " +(a+b)+"<br>");
+        }
+        Add(10,20); // actual parameter or arguments as we passing to function
+        Add(5,10); 
+
+        var x= 40; //formal parameter
+        var y =20;// formal parameter
+        
+        function Add(a,b){
+            document.writeln(" Addition is : " +(a+b)+"<br>");
+        }
+        Add(x,y); 
+
+        document.write("<hr>");
+
+
+        // Return Type function  or function returning values
+        function Sub(p ,q){
+                return (p - q)
+        }
+         Result =  Sub(4,3);
+         document.writeln(Result);
+         document.write("<hr>");
+         // Arrow Function
+
+         // Arrow Function use as a shorter way to create a function and 
+         // increses the readablity of code
+         // also n
+          // known as anonomous function
+
+          const Demo = ()=>{
+           document.writeln("hello");
+          }
+          document.write("<hr>");
+
+          Demo();
+
+
+         //  Imediate invoke function expresseion == IIFE
+         // or Anonumous function
+          (
+            ()=>{
+               document.writeln("Hellow Anonymoues");
+            }
+          )();
+*/
+
+        function UserName(Name = "demo"){
+            document.writeln("UserName : " + (Name) +"<br>")
+        }
+        UserName("Swapnil");
+        UserName(1);
+        UserName();
+
+        // Default parameter  value when user not define 
+        //  Rest Parameter
+
+        // Rest Parameter , spread operator
+        function sum(...number){
+            return number;
+        }
+        document.writeln(sum(1,2,3,4));
+
+        // Scope of variable 
+        // global variable is access able everywhere
+        // block level vaiable means scope of variable is only in the block or we can say function
+    </script>
+
+</body>
+</html>

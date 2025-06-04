@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closer</title>
+</head>
+
+<body>
+    <script>
+        // function within  a function ia called closer
+        // use the access parent function variable to child function
+        function First() {
+            let n = 10;
+            console.log("inside first : " + n);
+
+
+            function Second() {
+                console.log("inside second : " + n);
+
+
+                function Third() {
+                    console.log("inside third : " + n);
+
+                }
+                Third();
+            }
+            Second();
+        }
+        First();
+
+        // lexical function where it is declare and where it is called
+        // inner function looks to the nearest funtion
+
+
+
+    </script>
+</body>
+
+</html>
