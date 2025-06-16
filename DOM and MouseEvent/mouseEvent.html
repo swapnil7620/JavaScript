@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        i:hover{
+            color: blue;
+        }
+         #hover{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: red;
+
+        } 
+            
+    </style>
+</head>
+<body>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+       Accusamus error non enim, repellat iusto perspiciatis sint quidem 
+       eius totam quae quo alias explicabo et voluptatum odio dolorum obcaecati quisquam dignissimos.</p>
+     <button oncontextmenu="ChaneColor()">Click</button>
+
+
+     <input type="password" placeholder="Enter Password">
+     <i class="fas fa-eye-slash" onmousedown="Show()" onmouseup="Hide()"></i>
+    
+     <div>
+        <p>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                 Cum dolore natus at labore totam inventore ea recusandae delectus eveniet saepe nam blanditiis aliquid, consequuntur numquam voluptas a temporibus laboriosam provident.</span>
+        </p>
+     </div>
+
+
+     <div id="hover" onmouseover="Hover(this)"
+      onmouseout="Out(this)">
+
+     </div>
+
+     <script>
+
+         function Hover(a){
+            a.style.background="black"
+
+         }
+         function Out(b){
+            b.style.background="green"
+
+         }
+         function ChaneColor(){
+            var para=document.querySelector("p");
+            para.style.color="red";
+         }
+
+         function Show(){
+              var input=document.querySelector("input");
+              input.setAttribute("type","text");
+              document.querySelector("i").setAttribute("class","fas fa-eye")
+         }
+         function Hide(){
+              var input=document.querySelector("input");
+              input.setAttribute("type","password");
+              document.querySelector("i").setAttribute("class","fas fa-eye-slash")
+         }
+         
+
+         document.querySelector("p").addEventListener("mousemove",(event)=>{
+            console.log(event.clientX);
+            console.log(event);
+         })
+
+
+        // document.addEventListener("contextmenu",(event)=>{
+        //         event.preventDefault();
+        //        alert("You are not able to inspect it")
+               
+        // })
+
+        // window resize us it
+        
+         
+     </script>
+</body>
+</html>

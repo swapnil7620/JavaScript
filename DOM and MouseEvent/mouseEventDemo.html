@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    i:hover {
+        color: blue;
+    }
+
+    #hover {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt consectetur modi minima explicabo! Facilis
+        blanditiis, eum doloribus accusantium, est eos dolorem id sit maiores optio quidem quo cum vero.</p>
+    <button oncontextmenu="Changecolor()">Click</button>
+
+    <input type="password" placeholder=" Enter the Password">
+    <i class="fa-regular fa-eye-slash" onmousedown="Show()" onmouseup="Hide()"></i>
+    <br>
+    <br>
+
+    <div id="hover" onmouseover="Hover(this)" onmouseout="Out(this)"></div>
+
+
+    <script>
+
+        function Hover(a) {
+            a.style.background = "black";
+
+        }
+
+        function Out(b) {
+            b.style.background = "blue";
+        }
+        function Changecolor() {
+            let para = document.querySelector("p");
+            para.style.color = "red";
+        }
+
+
+        function Show() {
+            let Input1 = document.querySelector("input");
+            Input1.setAttribute("type", "text");
+            document.querySelector("i").setAttribute("class", "fa-regular fa-eye")
+        }
+
+        function Hide() {
+            let Input = document.querySelector("input");
+            Input.setAttribute("type", "password");
+            document.querySelector("i").setAttribute("class", "fa-regular fa-eye-slash")
+        }
+
+
+        let counter = 0;
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+
+            counter++;
+            if(counter<= 3){
+                alert(`warning you don't have rights to  inspect  ${counter} / 3`);
+        }
+
+             else if(counter==4){
+                alert(`last warning`)
+
+             }
+            else{
+                alert(`Bye Bye`);
+              window.close();
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and MouseEvent</title>
+    <style>
+        /* #demo{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <p id="demo">Lorem ipsum dolor sit amet.</p>
+    <p class="newcls">Lorem ipsum dolor sit amet.1</p>
+    <p class="newcls">Lorem ipsum dolor sit amet.2</p>
+
+    <div class="abc">
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, nisi quidem reiciendis autem laudantium voluptate praesentium. Aliquam, nemo nobis debitis dolorem assumenda soluta, accusantium esse sed ipsam, doloribus fugiat autem? </p> <br>
+    </div>
+
+    <section id="section1">
+        <p>1234567890</p>
+    </section>
+    <span>This is span tag1</span>
+    <span>This is span tag2</span>
+    <span>This is span tag3</span>
+
+
+    <section >
+    <span class="demo1">This is span tag1</span><br>
+    <span class="demo1">This is span tag2</span><br>
+    <span>This is span tag3</span><br>
+
+
+    <span id="Demo3">1</span><br>
+    <span id="Demo3">2</span><br>
+    
+    </section>
+    <script>
+               
+
+ 
+               // for loop is mandatory for getElementsByClassName
+                let access2 = document.getElementsByClassName("abc");
+                for(let i=0; i<access2.length; i++){
+                    access2[i].style.color="red";
+                }
+
+                   let Section1 =document.getElementById("section1");
+                   Section1.style.backgroundColor="yellow";
+                   Section1.style.color="red";
+
+
+                    // for loop is mandatory for  getElementsByTagName 
+                //   let Span1= document.getElementsByTagName("span");
+                // for(let i =0;i<=Span1.length;i++)
+                // {
+                //     Span1[i].style.color="blue";
+                // }
+
+                    // let Demo1 = document.querySelector(".demo1");
+                    //  Demo1.style.color="red";
+                    //  Demo1.style.backgroundColor="blue";
+                    
+
+                    //   for loop is mandatory for  querySelectorAll  
+                let Demo2 = document.querySelectorAll("#Demo3");
+                    Demo2.forEach(element => {
+                        element.style.backgroundColor="Red";     
+                });
+
+
+        // var acces=document.getElementById("demo");
+        // acces.style.color="red";
+        // console.log(acces);
+
+
+    //    var accesclass=document.getElementsByClassName("newcls");
+    //         for(i=0;i<accesclass.length;i++){
+    //             accesclass[i].style.color="grey";
+    //         }
+
+    // var tagname=document.getElementsByTagName("span");
+    //  for(i=2;i<tagname.length;i++){
+    //     tagname[i].style.color="yellow"
+    //  }
+
+    //it access only the first element
+    var qselector=document.querySelector(".newcls");
+    qselector.style.color="blue";
+
+    // var qallselector=document.querySelectorAll(".newcls");
+
+    // for(i=0;i<qallselector.length;i++){
+    //     qallselector[i].style.color="grey";
+    //     qallselector[1].style.color="blue";
+    // }
+    
+
+    </script>
+</body>
+</html>
