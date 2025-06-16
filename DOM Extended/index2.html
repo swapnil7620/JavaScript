@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="add">
+         <p id="para">lorem</p>
+    </div>
+    <Button onclick="Add()">ADD</Button>
+    <Button onclick="InsertBefore()">InsertBefore</Button>
+    <Button onclick="Replace()">Replace</Button>
+    <Button onclick="Remove()">Remove</Button>
+    <script>
+        function Add(){
+    let createElement = document.createElement("h1");
+    // console.log(createElement);
+    let creatContent = document.createTextNode("This is new H1");
+    createElement.appendChild(creatContent);
+    document.getElementById("add").appendChild(createElement);
+        }
+    </script>
+</body>
+</html>

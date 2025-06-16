@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="add">
+        <h1>This is H1</h1>
+           <p id="before">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat vitae nesciunt magnam voluptatum! Ratione, voluptatibus? Itaque soluta nostrum qui dicta delectus possimus et, tempore saepe aliquam. Voluptas, labore necessitatibus?</p>
+           <h4>This is h4</h4>
+           <h5 id="add2"></h5>
+    </div>
+
+    <button onclick="Demo()">Innerhtml</button>
+
+    <button onclick="Add()">Add</button>
+    <button onclick="InsertBefore()">InserBefore</button>
+    <button onclick="Replace()">Replace</button>
+    <button onclick="Remove()">Remove</button>
+
+
+    <script>
+
+        let parent=document.getElementById("add")
+          function Add(){
+            let el=prompt("Enter element which you want to create")
+            let content=prompt("Enter content which you want to create")
+            let createElement=document.createElement(el);
+            // console.log(createElement);
+            let createContent=document.createTextNode(content)
+            // console.log(createContent);
+            createElement.appendChild(createContent);
+            // console.log(createElement);
+           document.getElementById("add").appendChild(createElement);
+          }
+
+    function InsertBefore(){
+        let creatElement=document.createElement("h2");
+        let creatContet=document.createTextNode("This is New H2");
+        creatElement.appendChild(creatContet);
+        let reff=document.getElementById("before")
+        parent.insertBefore(creatElement,reff);
+    }
+
+    function Replace(){
+        let creatElement=document.createElement("h2");
+        let creatContet=document.createTextNode("This is New replaced h2");
+        creatElement.appendChild(creatContet);
+        var reff=document.querySelector("h1");
+        parent.replaceChild(creatElement,reff)
+    }
+
+    function Remove(){
+        var child=document.querySelector("h4");
+          parent.removeChild(child);
+        //   parent.remove();
+    }
+
+     function Demo(){
+        document.getElementById("add2").innerHTML="<p>This is para</p>"
+        // document.getElementById("add2").innerText="This is para Just text"
+     }
+
+//   console.log( document.createComment("This is comment"));
+
+
+
+    </script>
+</body>
+</html>s

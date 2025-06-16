@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="add">
+         <h3 id="Name"></h3>
+    </div>
+    <div id="info">
+        <h1>Hi i am  from Pune</h1>
+        <h4>State</h4>
+    </div>
+
+    <button onclick="Name()">User Name</button>
+    <button onclick="Info()">Add</button>
+     <button onclick="Replace()">Replace City</button>
+     <button onclick="Remove()">Remove</button>
+
+    <script>
+   
+     let arr =[1,2,3,4,5];
+     console.log(arr)
+        function Name(){
+            (document.getElementById("Name").innerHTML=" I am Swapnil Kishor Mahajan" + document.writeln(arr[0]) );
+           
+        }
+        
+          function Info(){
+            let element=prompt("Enter the text size element(h1,h2,h3,...)")
+            let information=prompt("Add the information")
+            let createElement=document.createElement(element);
+            let createContent=document.createTextNode(information)
+            createElement.appendChild(createContent);
+              let color2=   document.getElementById("info").appendChild(createElement);
+              color2.style.color="Blue";
+          }
+
+        //    let parent=document.getElementById("info");
+          function Replace(){
+          let creatElement=document.createElement("h1");
+          let creatContet=document.createTextNode(" I am From Chalisgaon");
+          creatElement.appendChild(creatContet);
+          var reff=document.querySelector("h1");
+          parent.replaceChild(creatElement,reff);
+            }
+
+            let parent=document.getElementById("info");
+             function Remove(){
+                  let element=prompt("Enter the element you want to remove fron indo(h1,h2,h3,...)")
+                  var child=document.querySelector(element);
+                  parent.removeChild(child);
+             }
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .demo{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+    .demo1{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(37, 234, 15);
+    }
+    .Newcls{
+        color: red;
+    }
+    .Newcls1{
+        color: rgb(60, 255, 0);
+    }
+   </style>
+</head>
+<body>
+    <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height="400" width="400">
+    <button onclick="Next()">Next</button>
+    <button onclick="Prev()">Prev</button>
+
+    <div class="demo">
+        demo
+    </div>
+    <a href="https://www.pexels.com/search/car/">Click</a>
+    <button onclick="Remove()">Remove</button>
+    <button onclick="Replace()">Replace</button>
+    <button onclick="Get()">Get</button>
+
+
+    <p class="Newcls">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, doloremque asperiores expedita consectetur nisi sapiente fugit minima cumque ipsa culpa iusto quibusdam non dignissimos qui. Modi molestias quos enim nulla.</p>
+    <button onclick="AddClass()">ADDCLASS</button>
+
+    <script>
+        function Next(){
+            let srcs="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
+             document.querySelector("img").setAttribute("src",srcs)  
+        }
+        function Prev(){
+             document.querySelector("img").setAttribute("src","https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600")  
+        }
+
+
+        function Remove(){
+            document.querySelector(".demo").removeAttribute("class")
+        }
+        function Replace(){
+            document.querySelector(".demo").setAttribute("class","demo1")
+        }
+        function Get(){
+           var data= document.querySelector("a").getAttribute("href");
+           alert(data);
+        }
+
+        function AddClass(){
+            // document.querySelector("p").classList.replace("Newcls","Newcls1")
+            document.querySelector("p").id="demo";
+        }
+
+
+
+     
+
+
+    </script>
+
+
+<h1></h1>
+
+</body>
+</html>
