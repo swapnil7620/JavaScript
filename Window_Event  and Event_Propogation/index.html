@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Event</title>
+</head>
+<body>
+    
+   
+
+    <script> 
+        //  window.addEventListener("load",()=>{
+        //      alert("Page is load..."); // 
+        // //    window.print();// use to print 
+        //    document.writeln("Hi");
+        //  });
+
+
+         let  counter = 0;
+        window.addEventListener("resize",()=>{
+            console.log("resize...");
+            
+           
+             if(counter <= 3 ){    
+                 alert(`warning...." + ${counter}`);                   
+                 counter++;                   
+            }
+            else if(counter == 4){
+                 alert(`warning...." + ${counter}`); 
+            }
+            else{
+                alert(`Bye Bye`);
+                 window.close();
+            }
+        })
+
+      
+
+    </script>
+</body>
+</html>

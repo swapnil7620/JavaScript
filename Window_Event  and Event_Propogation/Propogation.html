@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+</head>
+<body>
+
+    <div>
+        <p>
+            <button>click</button>
+        </p>
+    </div>
+    <script>
+        
+         var btn1 = document.querySelector("button");
+         btn1.addEventListener("click",(function(event){
+             document.querySelector("body").style.background="red";
+            alert("yes clicked on button ");
+           
+          }),false);
+
+          var btn2 = document.querySelector("p");
+         btn2.addEventListener("click",(function(event){
+             document.querySelector("body").style.background="grey";
+            alert("yes clicked on paragraph ");
+             event.stopPropagation();
+         }),false);
+
+          var btn3 = document.querySelector("div");
+         btn3.addEventListener("click",()=>{
+             document.querySelector("body").style.background="yellow";
+            alert("yes clicked on div ");
+         },false);
+
+
+    </script>
+</body>
+</html>
